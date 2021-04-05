@@ -4,4 +4,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <br>
 Falta: Independizar comentarios.
 <br>
-La prueba está disponible en: (torylucho.netlify.app)
+Siga el siguiente link para visualizar una [PRUEBA](torylucho.netlify.app)
