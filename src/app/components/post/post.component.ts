@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { posts } from 'src/app/interfaces/post.interface';
-import { PostsService } from 'src/app/services/posts.service';
+import { PeticionesService } from 'src/app/services/peticiones.service';
 
 @Component({
   selector: 'app-post',
@@ -9,7 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostComponent implements OnInit {
   posts: any[] = [];
-  constructor(private postService: PostsService) { }
+  constructor(private postService: PeticionesService) { }
 
   ngOnInit(): void {
     this.mostrarPosts();
@@ -18,8 +18,14 @@ export class PostComponent implements OnInit {
     this.postService.getPost().subscribe((resp) => {
       // console.log(resp);
       this.posts.push(resp);
-      console.log(this.posts);
+      // console.log(this.posts);
     });
+  }
+  mostrarComentarios(id: number) {
+    this.postService.getComments(id).subscribe((resp) => {
+      console.log(resp);
+      console.log(id);
+    })
   }
 
 }
