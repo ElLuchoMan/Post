@@ -20,8 +20,7 @@ export class CommentsComponent implements OnInit {
       // console.log(resp);
       // console.log(id);
       this.comments.push(resp);
-      console.log(this.comments);
-      console.log(id);
+      // console.log(this.comments);
     })
 
   }
