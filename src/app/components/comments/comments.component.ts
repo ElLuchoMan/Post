@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { comments } from 'src/app/interfaces/comments.interface';
 import { PeticionesService } from 'src/app/services/peticiones.service';
-
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',

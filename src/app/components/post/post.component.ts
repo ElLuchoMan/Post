@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { posts } from 'src/app/interfaces/post.interface';
 import { PeticionesService } from 'src/app/services/peticiones.service';
-
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',

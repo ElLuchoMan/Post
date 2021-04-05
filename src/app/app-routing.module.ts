@@ -7,9 +7,8 @@ const routes: Routes = [
   { path: '', component: PostComponent },
   { path: 'posts', component: PostComponent },
   { path: 'comments', component: CommentsComponent },
-  { path: '**', redirectTo: ''}
+  { path: '**', redirectTo: '' }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
