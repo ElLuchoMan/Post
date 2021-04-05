@@ -9,9 +9,8 @@ import { PeticionesService } from 'src/app/services/peticiones.service';
 })
 export class PostComponent implements OnInit {
   posts: any[] = [];
-  comments: any[] = [];
+  // comments: any[] = [];
   constructor(private postService: PeticionesService) { }
-
   ngOnInit(): void {
     this.mostrarPosts();
   }
@@ -19,15 +18,7 @@ export class PostComponent implements OnInit {
     this.postService.getPost().subscribe((resp) => {
       // console.log(resp);
       this.posts.push(resp);
-      console.log(this.posts);
+      // console.log(this.posts);
     });
-  }
-  mostrarComentarios(id: number) {
-    this.postService.getComments(id).subscribe((resp) => {
-      // console.log(resp);
-      // console.log(id);
-      this.comments.push(resp);
-      console.log(this.comments);
-    })
   }
 }
