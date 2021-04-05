@@ -16,6 +16,6 @@ export class PeticionesService {
     return this.http.get<posts>(baseUrl + 'posts');
   }
   getComments(id: number): Observable<comments> {
-    return this.http.get<comments>(baseUrl + 'posts/{id}/comments')
+    return this.http.get<comments>(baseUrl + `posts/${id}/comments`);
   }
 }

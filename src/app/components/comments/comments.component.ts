@@ -8,10 +8,11 @@ import { PeticionesService } from 'src/app/services/peticiones.service';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  comments: comments[] = [];
-  constructor() { }
+  
+  constructor(private commentsService: PeticionesService) { }
 
   ngOnInit(): void {
   }
  
+
 }
