@@ -8,7 +8,7 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  posts: posts[] = [];
+  posts: any[] = [];
   constructor(private postService: PostsService) { }
 
   ngOnInit(): void {
@@ -16,7 +16,9 @@ export class PostComponent implements OnInit {
   }
   mostrarPosts() {
     this.postService.getPost().subscribe((resp) => {
-      console.log(resp);
+      // console.log(resp);
+      this.posts.push(resp);
+      console.log(this.posts);
     });
   }
 
