@@ -8,9 +8,9 @@
                     <h5 class="card-title">{{post.title |titlecase}}</h5>
                     <p>{{post.body}}</p>
                     <a class="btn btn-primary  btn-sm" data-bs-toggle="collapse" href="#comments" role="button"
-                        aria-expanded="false">Comments</a>
+                        aria-expanded="false" (click)="setId(post.id)">Comments</a>
                     <div class="collapse mt-4" id="comments">
-                        <app-comments [id]="post.id" ></app-comments>
+                        <app-comments [id]="idenviar" ></app-comments>
                     </div>
                 </div>
             </div>

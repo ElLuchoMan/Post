@@ -9,6 +9,7 @@ import { PeticionesService } from 'src/app/services/peticiones.service';
 })
 export class PostComponent implements OnInit {
   posts: any[] = [];
+  idenviar: number = 0;
   // comments: any[] = [];
   constructor(private postService: PeticionesService) { }
   ngOnInit(): void {
@@ -20,5 +21,11 @@ export class PostComponent implements OnInit {
       this.posts.push(resp);
       // console.log(this.posts);
     });
+  }
+  setId(id: number) {
+    this.postService.post = id;
+    // console.log(this.postService.post);
+    this.idenviar = id;
+    console.log(this.idenviar);
   }
 }

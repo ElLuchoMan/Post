@@ -11,6 +11,7 @@ const baseUrl = environment.posts;
 })
 
 export class PeticionesService {
+  post:number=0;
   constructor(private http: HttpClient) { }
   getPost(): Observable<posts> {
     return this.http.get<posts>(baseUrl + 'posts');

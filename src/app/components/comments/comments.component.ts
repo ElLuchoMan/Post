@@ -8,15 +8,15 @@ import { PeticionesService } from 'src/app/services/peticiones.service';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  @Input() id: number = 0;
+  @Input() id: number = 1;
   comments: any[] = [];
   constructor(private commentsService: PeticionesService) { }
 
   ngOnInit(): void {
-    this.mostrarComentarios(this.id);
+    this.mostrarComentarios(this.commentsService.post);
   }
   mostrarComentarios(id: number) {
-    this.commentsService.getComments(id).subscribe((resp) => {
+    this.commentsService.getComments(this.id).subscribe((resp) => {
       // console.log(resp);
       // console.log(id);
       this.comments.push(resp);
