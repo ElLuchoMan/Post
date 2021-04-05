@@ -10,7 +10,6 @@ import { PeticionesService } from 'src/app/services/peticiones.service';
 export class PostComponent implements OnInit {
   posts: any[] = [];
   idenviar: number = 0;
-  // comments: any[] = [];
   constructor(private postService: PeticionesService) { }
   ngOnInit(): void {
     this.mostrarPosts();

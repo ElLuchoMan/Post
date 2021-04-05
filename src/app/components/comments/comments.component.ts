@@ -11,7 +11,6 @@ export class CommentsComponent implements OnInit {
   @Input() id: number = 1;
   comments: any[] = [];
   constructor(private commentsService: PeticionesService) { }
-
   ngOnInit(): void {
     this.mostrarComentarios(this.commentsService.post);
   }
@@ -22,6 +21,5 @@ export class CommentsComponent implements OnInit {
       this.comments.push(resp);
       // console.log(this.comments);
     })
-
   }
 }
